@@ -1,0 +1,24 @@
+<html>
+<body>
+<FORM NAME="joe">
+    <INPUT TYPE="hidden" NAME="burns">
+</FORM>
+
+<SCRIPT LANGUAGE="javascript">
+
+    var locate = window.location
+    document.joe.burns.value = locate
+
+    var text = document.joe.burns.value
+
+    function delineate(str)
+    {
+        theleft = str.indexOf("=") + 1;
+        theright = str.lastIndexOf("&");
+        return(str.substring(theleft, theright));
+    }
+    document.write("Correct Answers Scored: " +delineate(text));
+
+</SCRIPT>
+</body>
+</html>

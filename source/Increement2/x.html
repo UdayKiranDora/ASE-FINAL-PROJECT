@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div#test{ border:#000 1px solid; padding:10px 40px 40px 40px; }
+        #x{ text-align: right;}
+        div#timer{  text-align: right;}
+        a:link, a:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        body
+        {
+            background-color: #07d8ff;
+        }
+
+        a:hover, a:active {
+            background-color: red;
+        }
+
+    </style>
+
+    <script>
+        var Timer;
+        var TotalSeconds;
+        var flag=4;
+
+        function CreateTimer(TimerID, Time)
+        {
+            Timer = document.getElementById(TimerID);
+            TotalSeconds = Time;
+            UpdateTimer()
+            window.setTimeout("Tick()", 1000);
+        }
+
+        function Tick()
+        {
+
+            TotalSeconds -= 1;
+            if(TotalSeconds ==-1&&flag!=0)
+            {
+                alert("Time Up");
+// window.location="quiz.html";
+                window.reload('http://localhost:63342/Increement2/scores.html?_ijt=fl5tgr48dv2ooo2v0u8kbe7q35','frame1');
+
+            }
+            else if(TotalSeconds !=-1&&flag!=0)
+            {
+                UpdateTimer()
+                window.setTimeout("Tick()", 1000);
+            }
+            else if(TotalSeconds !=-1&&flag==0)
+            {
+                Timer.innerHTML = TotalSeconds;
+            }
+            else if(TotalSeconds ==-1&&flag==0)
+            {
+                alert("Time Up");
+// window.location="quiz.html";
+                window.reload('http://localhost:63342/Increement2/scores.html?_ijt=fl5tgr48dv2ooo2v0u8kbe7q35', 'frame1');
+            }
+        }
+
+        function UpdateTimer() {
+            Timer.innerHTML = TotalSeconds;
+        }
+        var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+        var questions = [
+            [ "Which one of the following forces is purely attractive?", "Gravitational force", "Electrostatic force", "Magnetic force", "A" ],
+            [ "Which one of the following forces depends on moving charges?", "Magnetic Force", "Electric Force", "Gravitational Force", "B" ],
+            [ "What is the main source of Magnetic Force?", "Magnetic Currents", "Attraction force", "Poles Strength", "A" ],
+            [ "Who Observed Gravity first?", "Einstein", "Stephen", "Newton", "C" ]
+        ];
+
+        function _(x){
+            return document.getElementById(x);
+        }
+        function renderQuestion(){
+            test = _("test");
+
+            if(pos >= questions.length){
+                /*  window.location.assign("quiz1.jsp?score="+correct+"&x=correct&str=q1&length="+questions.length);
+                 pos = 0;
+                 correct = 0;
+                 return false;*/
+                //    document.getElementById("hid").innerHTML=correct;
+                test.innerHTML += "<h1>Correct Answers :</h1>"+correct;
+
+            }
+            if(pos+1<=questions.length)
+                _("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+            else
+                _("test_status").innerHTML = "Feedback"
+            question = questions[pos][0];
+            chA = questions[pos][1];
+            chB = questions[pos][2];
+            chC = questions[pos][3];
+
+            test.innerHTML = "<h3>"+question+"</h3>";
+            test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+            test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+            test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br><br>";
+            test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+
+        }
+        function checkAnswer(){
+            flag--;
+            choices = document.getElementsByName("choices");
+            for(var i=0; i<choices.length; i++){
+                if(choices[i].checked){
+                    choice = choices[i].value;
+                }
+            }
+            if(choice == questions[pos][4]){
+                correct++;
+            }
+            pos++;
+
+            renderQuestion();
+
+        }
+        window.addEventListener("load", renderQuestion, false);
+    </script>
+</head>
+<body>
+<h2 id="test_status"></h2>
+<div id="test"></div>
+<h3 id="x"><pre><a href="http://localhost:63342/Increement2/project-cards-template/index.html?_ijt=s7822ptbmmv3ou43bonps9fpje">EXIT</a>     TIME REMAINING: </pre></h3>
+<div id='timer' />
+<form method="link" action="scores.html">
+    <input type="hidden" id="hid">
+</form>
+<script type="text/javascript">window.onload = CreateTimer("timer", 20);</script>
+</body>
+</html>

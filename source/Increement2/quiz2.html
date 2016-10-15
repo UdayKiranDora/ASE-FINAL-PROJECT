@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        button#bu {
+            border-top: 1px solid #96d1f8;
+            background: #65a9d7;
+            background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+            background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+            background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+            background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+            background: -o-linear-gradient(top, #3e779d, #65a9d7);
+            padding: 5px 10px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+            -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+            box-shadow: rgba(0,0,0,1) 0 1px 0;
+            text-shadow: rgba(0,0,0,.4) 0 1px 0;
+            color: white;
+            font-size: 14px;
+            font-family: Georgia, serif;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+        button#bu:hover {
+            border-top-color: #28597a;
+            background: #28597a;
+            color: #ccc;
+        }
+        button#bu:active {
+            border-top-color: #2384c4;
+            background: #2384c4;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {background-color: #3e8e41}
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        div#test_status
+        {
+            font-size: x-large;
+        }
+        #x{ text-align: right;}
+        div#timer
+        {
+            text-align: right;
+            margin-left: 650px;
+        }
+
+        body
+        {
+            background-color: #b3ffd9;
+        }
+        h3#mine
+        {
+            margin-left: 450px;
+        }
+
+
+    </style>
+    <style>
+
+        @import url(http://fonts.googleapis.com/css?family=Cabin:700);
+
+        /* HTML5 Boilerplate accessible hidden styles */
+        [type="radio"] {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px; margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        /* One radio button per line */
+        label {
+            display: block;
+            cursor: pointer;
+            line-height: 2.5;
+            font-size: 1.5em;
+        }
+
+        [type="radio"] + span {
+            display: block;
+        }
+
+        /* the basic, unchecked style */
+        [type="radio"] + span:before {
+            content: '';
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.25em;
+            border-radius: 1em;
+            border: 0.125em solid #fff;
+            box-shadow: 0 0 0 0.15em #000;
+            margin-right: 0.75em;
+            transition: 0.5s ease all;
+        }
+
+        /* the checked style using the :checked pseudo class */
+        [type="radio"]:checked + span:before {
+            background: green;
+            box-shadow: 0 0 0 0.25em #000;
+        }
+
+        /* never forget focus styling */
+        [type="radio"]:focus + span:after {
+            content: '\0020\2190';
+            font-size: 1.5em;
+            line-height: 1;
+            vertical-align: -0.125em;
+        }
+
+        /* Nothing to see here. */
+        body {
+            margin: 3em auto;
+            max-width: 30em;
+            font-family: Cabin, serif;
+        }
+
+        fieldset {
+            font-size: 1em;
+            border: 2px solid #000;
+            padding: 2em;
+            border-radius: 0.5em;
+        }
+
+        legend {
+            color: #fff;
+            background: #000;
+            padding: 0.25em 1em;
+            border-radius: 1em;
+        }
+
+        .p {
+            text-align: center;
+            font-size: 14px;
+            padding-top: 120px;
+        }
+    </style>
+
+    <script>
+        var Timer;
+        var TotalSeconds;
+        var flag=4;
+        function goback() {
+            window.history.back();
+        }
+
+        function CreateTimer(TimerID, Time)
+        {
+            Timer = document.getElementById(TimerID);
+            TotalSeconds = Time;
+            UpdateTimer()
+            window.setTimeout("Tick()", 1000);
+        }
+
+        function Tick()
+        {
+
+            TotalSeconds -= 1;
+            if(TotalSeconds ==-1&&flag!=0)
+            {
+                alert("Time Up");
+// window.location="quiz.html";
+                window.open('http://localhost:63342/ASE-FINAL-PROJECT-master/source/Increement2/project-cards-template/indexv.html?_ijt=kggk3l9k3pk2i77iulu9fpk28m',target="_self");
+
+            }
+            else if(TotalSeconds !=-1&&flag!=0)
+            {
+                UpdateTimer()
+                window.setTimeout("Tick()", 1000);
+            }
+            else if(TotalSeconds !=-1&&flag==0)
+            {
+                Timer.innerHTML = TotalSeconds;
+            }
+            else if(TotalSeconds ==-1&&flag==0)
+            {
+                alert("Time Up");
+// window.location="quiz.html";
+                window.open('http://localhost:63342/ASE-FINAL-PROJECT-master/source/Increement2/project-cards-template/indexv.html?_ijt=kggk3l9k3pk2i77iulu9fpk28m',target="_self");
+            }
+        }
+
+        function UpdateTimer() {
+            Timer.innerHTML = TotalSeconds;
+        }
+        var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+        var questions = [
+            [ "If X+8=10 then, X=?", "2", "18", "11", "A" ],
+            [ "If 3X+4=10 then, X=?", "4", "2", "3", "B" ],
+            [ "What is a mathematician called when he/she does research on algebra?", "Algebraist", "Mathematican", "Statistician", "A" ],
+            [ "What is (1+2)^2", "6", "10", "9", "C" ]
+        ];
+
+        function _(x){
+            return document.getElementById(x);
+        }
+        function renderQuestion(){
+            test = _("test");
+
+            if(pos >= questions.length){
+                /*  window.location.assign("quiz1.jsp?score="+correct+"&x=correct&str=q1&length="+questions.length);
+                 pos = 0;
+                 correct = 0;
+                 return false;*/
+                //    document.getElementById("hid").innerHTML=correct;
+                test.innerHTML += "<h1>Correct Answers :</h1>"+correct;
+
+            }
+            if(pos+1<=questions.length)
+                _("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+            else
+                _("test_status").innerHTML = "Feedback"
+            question = questions[pos][0];
+            chA = questions[pos][1];
+            chB = questions[pos][2];
+            chC = questions[pos][3];
+
+            // test.innerHTML = "<h3>"+question+"</h3>";
+            /*   test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+             test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+             test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br><br>";*/
+            test.innerHTML="<h3>"+question+"</h3><label> <input type='radio' name='choices' value='A'>   <span>"+chA+"</span>  </label> <label> <input type='radio'name='choices' value='B'> <span>"+chB+"</span></label> <label> <input type='radio' name='choices' value='C'> <span>"+chC+"</span> </label>"
+            test.innerHTML += "</br></br><button onclick='checkAnswer()' id='bu' class='button button2'>Submit Answer</button>";
+
+        }
+        function checkAnswer(){
+            flag--;
+            choices = document.getElementsByName("choices");
+            for(var i=0; i<choices.length; i++){
+                if(choices[i].checked){
+                    choice = choices[i].value;
+                }
+            }
+            if(choice == questions[pos][4]){
+                correct++;
+            }
+            pos++;
+
+            renderQuestion();
+
+        }
+        window.addEventListener("load", renderQuestion, false);
+    </script>
+</head>
+<body>
+<h2 id="test_status"></h2>
+<div id="test"></div>
+
+
+<!--   div#test{ border:#000 1px solid; padding:10px 40px 40px 40px; }-->
+<h3 id="mine"><pre><button class="button" onclick="goback()">EXIT</button>      TIME REMAINING: </pre></h3>
+<div id='timer' />
+<!--<form method="link" action="scores.html">
+    <input type="hidden" id="hid">
+</form>-->
+<script type="text/javascript">window.onload = CreateTimer("timer", 45);</script>
+</body>
+</html>
