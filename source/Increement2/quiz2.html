@@ -186,7 +186,7 @@
             {
                 alert("Time Up");
 // window.location="quiz.html";
-                window.open('http://localhost:63342/ASE-FINAL-PROJECT-master/source/Increement2/project-cards-template/indexv.html?_ijt=kggk3l9k3pk2i77iulu9fpk28m',target="_self");
+                window.open('http://localhost:63342/Increement2/project-cards-template/index.html?_ijt=h2nra2ql7kp1hdtbhah9fjqdfo',_(self));
 
             }
             else if(TotalSeconds !=-1&&flag!=0)
@@ -202,7 +202,7 @@
             {
                 alert("Time Up");
 // window.location="quiz.html";
-                window.open('http://localhost:63342/ASE-FINAL-PROJECT-master/source/Increement2/project-cards-template/indexv.html?_ijt=kggk3l9k3pk2i77iulu9fpk28m',target="_self");
+                window.open('http://localhost:63342/Increement2/project-cards-template/index.html?_ijt=h2nra2ql7kp1hdtbhah9fjqdfo',_ (self));
             }
         }
 
@@ -210,12 +210,62 @@
             Timer.innerHTML = TotalSeconds;
         }
         var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+        p="If X+8=10 then, X=?";
+        q="2";
+        r="18";
+        s="11";
+        t="A";
+        u="If 3X+4=10 then, X=?";
+        v="4";
+        w="2";
+        x="3";
+        y="B";
+        z="What is a mathematician called when he/she does research on algebra?";
+        a="Algebraist";
+        b="Mathematican";
+        c="Statistician";
+        d="A";
+        e="What is (1+2)^2";
+        f="6";
+        g="10";
+        h="9";
+        i="C";
+        if(localStorage) {
+            //form = document.forms["logv"];
+            // var yn= form["u"].value;
+            var p    = localStorage.getItem("a21");
+            var q    = localStorage.getItem("b21");
+            var r    = localStorage.getItem("c21");
+            var s    = localStorage.getItem("d21");
+            var t    = localStorage.getItem("e21");
+            var u    = localStorage.getItem("a22");
+            var v    = localStorage.getItem("b22");
+            var w    = localStorage.getItem("c22");
+            var x    = localStorage.getItem("d22");
+            var y    = localStorage.getItem("e22");
+            var z    = localStorage.getItem("a23");
+            var a    = localStorage.getItem("b23");
+            var b    = localStorage.getItem("c23");
+            var c    = localStorage.getItem("d23");
+            var d    = localStorage.getItem("e23");
+            var e    = localStorage.getItem("a24");
+            var f    = localStorage.getItem("b24");
+            var g    = localStorage.getItem("c24");
+            var h    = localStorage.getItem("d24");
+            var i    = localStorage.getItem("e24");
+
+            //  var y    = form["p"].value;
+
+
+        }
         var questions = [
-            [ "If X+8=10 then, X=?", "2", "18", "11", "A" ],
-            [ "If 3X+4=10 then, X=?", "4", "2", "3", "B" ],
-            [ "What is a mathematician called when he/she does research on algebra?", "Algebraist", "Mathematican", "Statistician", "A" ],
-            [ "What is (1+2)^2", "6", "10", "9", "C" ]
+            [ p, q, r, s, t],
+
+            [ u,v,w,x,y ],
+            [z,a,b,c,d],
+            [e,f,g,h,i]
         ];
+
 
         function _(x){
             return document.getElementById(x);

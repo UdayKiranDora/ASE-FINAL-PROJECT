@@ -186,7 +186,7 @@
             {
                 alert("Time Up");
 // window.location="quiz.html";
-                window.open('http://localhost:63342/ASE-FINAL-PROJECT-master/source/Increement2/project-cards-template/indexv.html?_ijt=kggk3l9k3pk2i77iulu9fpk28m',target="_self");
+                window.open('http://localhost:63342/Increement2/project-cards-template/index.html?_ijt=h2nra2ql7kp1hdtbhah9fjqdfo',_(self));
 
             }
             else if(TotalSeconds !=-1&&flag!=0)
@@ -202,7 +202,7 @@
             {
                 alert("Time Up");
 // window.location="quiz.html";
-                window.open('http://localhost:63342/ASE-FINAL-PROJECT-master/source/Increement2/project-cards-template/indexv.html?_ijt=kggk3l9k3pk2i77iulu9fpk28m',target="_self");
+                window.open('http://localhost:63342/Increement2/project-cards-template/index.html?_ijt=h2nra2ql7kp1hdtbhah9fjqdfo',_(self));
             }
         }
 
@@ -210,12 +210,62 @@
             Timer.innerHTML = TotalSeconds;
         }
         var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+        p="What is this state of matter that is tightly packed?";
+        q="solid";
+        r="gas";
+        s="liquid";
+        t="A";
+        u="What is this state of matter that is somewhat loose when compared to that of solid?";
+        v="solid";
+        w="liquid";
+        x="gas";
+        y="B";
+        z="What is this state of matter that is loosely packed?";
+        a="gas";
+        b="liquid";
+        c="plasma";
+        d="A";
+        e="What is this state of matter that which does not have any arrangement?";
+        f="liquid";
+        g="gas";
+        h="plasma";
+        i="C";
+        if(localStorage) {
+            //form = document.forms["logv"];
+            // var yn= form["u"].value;
+            var p    = localStorage.getItem("a31");
+            var q    = localStorage.getItem("b31");
+            var r    = localStorage.getItem("c31");
+            var s    = localStorage.getItem("d31");
+            var t    = localStorage.getItem("e31");
+            var u    = localStorage.getItem("a32");
+            var v    = localStorage.getItem("b32");
+            var w    = localStorage.getItem("c32");
+            var x    = localStorage.getItem("d32");
+            var y    = localStorage.getItem("e32");
+            var z    = localStorage.getItem("a33");
+            var a    = localStorage.getItem("b33");
+            var b    = localStorage.getItem("c33");
+            var c    = localStorage.getItem("d33");
+            var d    = localStorage.getItem("e33");
+            var e    = localStorage.getItem("a34");
+            var f    = localStorage.getItem("b34");
+            var g    = localStorage.getItem("c34");
+            var h    = localStorage.getItem("d34");
+            var i    = localStorage.getItem("e34");
+
+            //  var y    = form["p"].value;
+
+
+        }
         var questions = [
-            [ "What is this state of matter that is tightly packed?", "solid", "Gas", "Liquid", "A" ],
-            [ "What is this state of matter that is somewhat loose when compared to that of solid?", "Solid", "liquid", "Gas", "B" ],
-            [ "What is this state of matter that is loosely packed?", "Gas", "Liquid", "Plasma", "A" ],
-            [ "What is this state of matter that which does not have any arrangement?", "Liquid", "Gas", "Plasma", "C" ]
+            [ p, q, r, s, t],
+
+            [ u,v,w,x,y ],
+            [z,a,b,c,d],
+            [e,f,g,h,i]
         ];
+
 
         function _(x){
             return document.getElementById(x);

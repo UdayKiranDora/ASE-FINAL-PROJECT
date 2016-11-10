@@ -186,7 +186,7 @@
             {
                 alert("Time Up");
 // window.location="quiz.html";
-                window.open('http://localhost:63342/ASE-FINAL-PROJECT-master/source/Increement2/project-cards-template/indexv.html?_ijt=kggk3l9k3pk2i77iulu9fpk28m',target="_self");
+                window.open('http://localhost:63342/Increement2/project-cards-template/index.html?_ijt=h2nra2ql7kp1hdtbhah9fjqdfo',self);
 
             }
             else if(TotalSeconds !=-1&&flag!=0)
@@ -202,19 +202,70 @@
             {
                 alert("Time Up");
 // window.location="quiz.html";
-                window.open('http://localhost:63342/ASE-FINAL-PROJECT-master/source/Increement2/project-cards-template/indexv.html?_ijt=kggk3l9k3pk2i77iulu9fpk28m',target="_self");
+                window.open('http://localhost:63342/Increement2/project-cards-template/index.html?_ijt=h2nra2ql7kp1hdtbhah9fjqdfo',self);
             }
         }
+
 
         function UpdateTimer() {
             Timer.innerHTML = TotalSeconds;
         }
         var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
+       // var d ="Graviitational Force";
+        p="Which one of the following forces is purely attractive?";
+        q="Gravitational force";
+        r="Electrostatic force";
+        s="Magnetic force";
+        t="A";
+        u="Which one of the following forces depends on moving charges?";
+        v="Magnetic Force";
+        w="Electric Force";
+        x="Gravitational Force";
+        y="B";
+        z="What is the main source of Magnetic Force?";
+        a="Magnetic Currents";
+        b="Attraction force";
+        c="Poles Strength";
+        d="A";
+        e="Who Observed Gravity first?";
+        f="Einstein";
+        g="Stephen";
+        h="Newton";
+        i="C";
+            if(localStorage) {
+                //form = document.forms["logv"];
+                // var yn= form["u"].value;
+                var p    = localStorage.getItem("a1");
+                var q    = localStorage.getItem("b1");
+                var r    = localStorage.getItem("c1");
+                var s    = localStorage.getItem("d1");
+                var t    = localStorage.getItem("e1");
+                var u    = localStorage.getItem("a2");
+                var v    = localStorage.getItem("b2");
+                var w    = localStorage.getItem("c2");
+                var x    = localStorage.getItem("d2");
+                var y    = localStorage.getItem("e2");
+                var z    = localStorage.getItem("a3");
+                var a    = localStorage.getItem("b3");
+                var b    = localStorage.getItem("c3");
+                var c    = localStorage.getItem("d3");
+                var d    = localStorage.getItem("e3");
+                var e    = localStorage.getItem("a4");
+                var f    = localStorage.getItem("b4");
+                var g    = localStorage.getItem("c4");
+                var h    = localStorage.getItem("d4");
+                var i    = localStorage.getItem("e4");
+
+                //  var y    = form["p"].value;
+
+
+            }
         var questions = [
-            [ "Which one of the following forces is purely attractive?", "Gravitational force", "Electrostatic force", "Magnetic force", "A" ],
-            [ "Which one of the following forces depends on moving charges?", "Magnetic Force", "Electric Force", "Gravitational Force", "B" ],
-            [ "What is the main source of Magnetic Force?", "Magnetic Currents", "Attraction force", "Poles Strength", "A" ],
-            [ "Who Observed Gravity first?", "Einstein", "Stephen", "Newton", "C" ]
+            [ p, q, r, s, t],
+
+            [ u,v,w,x,y ],
+                [z,a,b,c,d],
+                [e,f,g,h,i]
         ];
 
         function _(x){
