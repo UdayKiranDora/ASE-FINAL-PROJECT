@@ -1,52 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Ramana</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="mobile-web-app-capable" content="yes">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <!-- <script src='https://code.responsivevoice.org/responsivevoice.js'></script> -->
+    <meta charset="UTF-8">
+    <title>Title</title>
     <style>
-        input[type=text] {
-            width: 130px;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: white;
-
-            background-position: 10px 10px;
-            background-repeat: no-repeat;
-            padding: 12px 20px 12px 40px;
-            -webkit-transition: width 0.4s ease-in-out;
-            transition: width 0.4s ease-in-out;
+        p{
+            font-weight: normal;
+            font-size: 4em;
+            font-family: 'Raleway', sans-serif;
+            width: 100px;
+            color: #000;
         }
-
-        input[type=text]:focus {
-            width: 100%;
-        }
-        h1
-        {
-            color: #4CAF50;
+                .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
             text-align: center;
-            font-size: xx-large;
-            font-family: "Lucida Bright";
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {background-color: #3e8e41}
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+    .glass{
+            /* background styles */
+            position: relative;
+            display: inline-block;
+            padding: 15px 25px;
+            background: green; /*for compatibility with older browsers*/
+            background-image: linear-gradient(green,lightgreen);
+
+            /* text styles */
+            text-decoration: none;
+            color: #fff;
+            font-size: 25px;
+            font-family: sans-serif;
+            font-weight: 100;
+            border-radius: 3px;
+            box-shadow: 0px 1px 4px -2px #333;
+            text-shadow: 0px -1px #333;
+        }
+        .glass:after{
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: calc(100% - 4px);
+            height: 50%;
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+        }
+        .glass:hover{
+            background: linear-gradient(#073,#0fa);
+        }
+    </style>
+    <style>
+        h1{
+            font-weight: normal;
+            font-size: 1em;
+            font-family: 'Raleway', sans-serif;
+            width: 10px;
+            color: #000;
+
+
+        }
+        div#a{
+            margin-left: 10pt;
+            margin-top: 20pt;
+        }
+        div#b{
+            margin-left: 10pt;
+            margin-top: 20pt;
         }
     </style>
 </head>
-<body background="b3.jpg">
-<h1>
-    Teaching kids how to pronounce words!!
-</h1>
-<input type="text" name="text" value="" maxlength="100" />
-<input onclick='speak()' type='button' value='🔊 Play' />
+<body background="Increement2/bz.jpg" style="background-size: cover">
 <script>
-    function speak() {
-        var text = $('input[name="text"]').val();
-        responsiveVoice.speak(text);
+
+    //   document.getElementsById("a").value="hello";
+
+
+
+
+    // var p1=0;
+
+    // var a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,h=0,i=0,j=0,k=0,l=0,m=0,n=0,o=0,p=0,q=0,r=0,s=0,t=0,u=0,v=0,w=0,x=0,y=0,z=0;
+    var p1=0;
+    var lisy=[];
+    var str="";
+    function re() {
+         location.reload();
+        var msg = new SpeechSynthesisUtterance("Continue for another search");
+        window.speechSynthesis.speak( msg );
     }
+
+    function  a() {
+
+        lisy[p1]='a';
+        p1++;
+        str+=lisy;
+        //    document.getElementById("res").innerHTML=str;
+    }
+
+    function  b() {
+
+        lisy[p1]='b';
+        p1++;
+        str+=lisy;
+        //  document.getElementById("res").innerHTML=str;
+
+    }
+
+    function  c() {
+
+        lisy[p1]='c';
+        p1++;
+        str+=lisy;
+        //  document.getElementById("res").innerHTML=str;
+
+    }
+
+    function  d() {
+
+        lisy[p1]='d';
+        p1++;
+        str+=lisy;
+        //  document.getElementById("res").innerHTML=str;
+
+    }
+
+    function  e() {
+
+        lisy[p1]='e';
+        p1++;
+        str+=lisy;
+        //  document.getElementById("res").innerHTML=str;
+
+    }
+
+    function  f() {
+
+        lisy[p1]='f';
+        p1++;
+        str+=lisy;
+        //  document.getElementById("res").innerHTML=str;
+    }
+
+    function  g() {
+
+        lisy[p1]='g';
+        p1++;
+        str+=lisy;
+        //  document.getElementById("res").innerHTML=str;
+    }
+
+    function  h() {
+
+        lisy[p1]='h';
+        p1++;
+        str+=lisy;
+        //   document.getElementById("res").innerHTML=str;
+    }
+
+    function  i() {
+
+        lisy[p1]='i';
+        p1++;
+        str+=lisy;
+        //   document.getElementById("res").innerHTML=str;
+    }
+
+
+    function  j() {
+
+        lisy[p1]='j';
+        p1++;
+        str+=lisy;
+        //   document.getElementById("res").innerHTML=str;
+    }
+
+
+    function  k() {
+
+        lisy[p1]='k';
+        p1++;
+        str+=lisy;
+        //   document.getElementById("res").innerHTML=str;
+    }
+
+    function  l() {
+
+        lisy[p1]='l';
+        p1++;
+        str+=lisy;
+        //   document.getElementById("res").innerHTML=str;
+    }
+
+    function  m() {
+        lisy[p1]='m';
+        p1++;
+        str+=lisy;
+        //   document.getElementById("res").innerHTML=str;
+    }
+
+    function  n() {
+
+        lisy[p1]='n';
+        p1++;
+        str+=lisy;
+        //   document.getElementById("res").innerHTML=str;
+    }
+
+    function  o() {
+        lisy[p1]='o';
+        p1++;
+        str+=lisy;
+        //   document.getElementById("res").innerHTML=str;
+    }
+
+    function  p() {
+
+        lisy[p1]='p';
+        p1++;
+        str+=lisy;
+        //   document.getElementById("res").innerHTML=str;
+    }
+
+    function  q() {
+
+        lisy[p1]='q';
+        p1++;
+        str+=lisy;
+        //  document.getElementById("res").innerHTML=str;
+    }
+
+    function  r() {
+
+        lisy[p1]='r';
+        p1++;
+        str+=lisy;
+        //  document.getElementById("res").innerHTML=str;
+    }
+
+    function  s() {
+
+        lisy[p1]='s';
+        p1++;
+        str+=lisy;
+        //   document.getElementById("res").innerHTML=str;
+    }
+
+    function  t() {
+
+        lisy[p1]='t';
+        p1++;
+        str+=lisy;
+        // document.getElementById("res").innerHTML=str;
+    }
+
+    function  u() {
+
+        lisy[p1]='u';
+        p1++;
+        str+=lisy;
+        // document.getElementById("res").innerHTML=str;
+
+    }
+
+    function  v() {
+
+        lisy[p1]='v';
+        p1++;
+        str+=lisy;
+        //  document.getElementById("res").innerHTML=str;
+    }
+
+    function  w() {
+
+        lisy[p1]='w';
+        p1++;
+        str+=lisy;
+        // document.getElementById("res").innerHTML=str;
+    }
+    function  x() {
+
+        lisy[p1]='x';
+        p1++;
+        str+=lisy;
+        // document.getElementById("res").innerHTML=str;
+    }
+    function  y() {
+
+        lisy[p1]='y';
+        p1++;
+        str+=lisy;
+        // document.getElementById("res").innerHTML=str;
+    }
+    function  z() {
+
+        lisy[p1]='z';
+        p1++;
+        str+=lisy;
+        // document.getElementById("res").innerHTML=str;
+
+    }
+    function  init() {
+
+        lisy[p1]='';
+        p1++;
+        //  str+=lisy;
+        var msg = new SpeechSynthesisUtterance(lisy[0]);
+        window.speechSynthesis.speak( msg );
+        for(var i=0;i<lisy.length;i++)
+        {
+
+            var msg = new SpeechSynthesisUtterance(lisy[i]);
+            window.speechSynthesis.speak( msg );
+            document.getElementById("res").innerHTML+=lisy[i];
+
+
+        }
+        var fres=document.getElementById("res").innerHTML;
+        var msg = new SpeechSynthesisUtterance(fres);
+        window.speechSynthesis.speak( msg );
+
+        /* var txt=document.getElementById("res").innerHTML;
+         var fres=txt.replace(",","");
+         document.getElementById("res").innerHTML=fres;*/
+
+
+    }
+
+    // document.getElementById("res1").innerHTML=str;
+    //   var lis=[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
+
+
+
+    /*    var str = "";
+     var i2;
+     for (i2=lisy.length;i2>=0;i2--)
+     {
+     str+=lisy[i];
+     //document.getElementById("res").innerHTML=lisy;
+     }
+     //document.getElementById("res").innerHTML=lisy;
+
+
+
+     /* lis=lis.sort(function(a, b){return a-b});
+     // document.getElementById("demo").innerHTML = points;
+
+     if (lis[0]>0) {
+     var stra = "a";
+     str +=stra;
+     }
+     if (lis[1]>0) {
+     var strb = "b";
+     str +=strb;
+
+     }
+     if (c>0) {
+     var strc = "c";
+     str +=strc;
+     }
+     if (d>0) {
+     var strd = "d";
+     str +=strd;
+     }
+     if (e>0) {
+     var stre = "e";
+     str +=stre;
+     }
+     if (f>0) {
+     var strf = "f";
+     str +=strf;
+     }
+     if (g>0) {
+     var strg = "g";
+     str +=strg;
+     }
+     if (h>0) {
+     var strh = "h";
+     str +=strh;
+     }
+
+     if (i>0) {
+     var stri = "i";
+     str +=stri;
+     }
+     if (j>0) {
+     var strj = "j";
+     str +=strj;
+     }
+     if (k>0) {
+     var strk = "k";
+     str +=strk;
+     }
+     if (l>0) {
+     var strl = "l";
+     str +=strl;
+     }
+     if (m>0) {
+     var strm = "m";
+     str +=strm;
+     }
+     if (n>0) {
+     var strn = "n";
+     str +=strn;
+     }
+     if (o>0) {
+     var stro = "o";
+     str +=stro;
+     }
+     if (p>0) {
+     var strp = "p";
+     str +=strp;
+     }
+     if (q>0) {
+     var strq = "q";
+     str +=strq;
+     }
+     if (r>0) {
+     var strr = "r";
+     str +=strr;
+     }
+     if (s>0) {
+     var strs = "s";
+     str +=strs;
+     }
+     if (t == 0) {
+     var strt = "t";
+     str +=strt;
+     }
+     if (u>0) {
+     var stru = "u";
+     str +=stru;
+     }
+     if (v>0) {
+     var strv = "v";
+     str +=strv;
+     }
+     if (w>0) {
+     var strw = "w";
+     str +=strw;
+     }
+     if (x>0) {
+     var strx = "x";
+     str +=strx;
+     }
+     if (y>0) {
+     var stry = "y";
+     str +=stry;
+     }
+     if (z>0) {
+     var strz = "z";
+     str +=strz;
+     }
+
+
+
+     document.getElementById("res").innerHTML=str;
+     // str='hell';
+     // var re= str.concat("he")*/
+
+    //    }
+
+
+
+
 </script>
+<p id="res"></p>
+<table>
+    <tr>
+        <td><button class="glass" id="a"style="float: left" onclick="a()"><h1>a</h1></button></td>
+        <td><button class="glass" id="b"style="float: left" onclick="b()"><h1>b</h1></button></td>
+        <td><button class="glass" id="c"style="float: left" onclick="c()"><h1>c</h1></button></td>
+        <td><button class="glass" id="d"style="float: left" onclick="d()"><h1>d</h1></button></td>
+        <td><button class="glass" id="e"style="float: left" onclick="e()"><h1>e</h1></button></td>
+        <td><button class="glass" id="f"style="float: left" onclick="f()"><h1>f</h1></button></td>
+        <td><button class="glass" id="g"style="float: left" onclick="g()"><h1>g</h1></button></td>
+        <td><button class="glass" id="h"style="float: left" onclick="h()"><h1>h</h1></button></td>
+        <td><button class="glass" id="i"style="float: left" onclick="i()"><h1>i</h1></button></td>
+        <td><button class="glass" id="j"style="float: left" onclick="j()"><h1>j</h1></button></td>
+        <td><button class="glass" id="k"style="float: left" onclick="k()"><h1>k</h1></button></td>
+        <td><button class="glass" id="l"style="float: left" onclick="l()"><h1>l</h1></button></td>
+        <td><button class="glass" id="m"style="float: left" onclick="m()"><h1>m</h1></button></td>
+
+
+    </tr>
+    <tr>
+        <td><button class="glass" id="n"style="float: left" onclick="n()"><h1>n</h1></button></td>
+        <td><button class="glass" id="o"style="float: left" onclick="o()"><h1>o</h1></button></td>
+        <td><button class="glass" id="p"style="float: left" onclick="p()"><h1>p</h1></button></td>
+        <td><button class="glass" id="q"style="float: left" onclick="q()"><h1>q</h1></button></td>
+        <td><button class="glass" id="r"style="float: left" onclick="r()"><h1>r</h1></button></td>
+        <td><button class="glass" id="s"style="float: left" onclick="s()"><h1>s</h1></button></td>
+        <td><button class="glass" id="t"style="float: left" onclick="t()"><h1>t</h1></button></td>
+        <td><button class="glass" id="u"style="float: left" onclick="u()"><h1>u</h1></button></td>
+        <td><button class="glass" id="v"style="float: left" onclick="v()"><h1>v</h1></button></td>
+        <td><button class="glass" id="w"style="float: left" onclick="w()"><h1>w</h1></button></td>
+        <td><button class="glass" id="x"style="float: left" onclick="x()"><h1>x</h1></button></td>
+        <td><button class="glass" id="y"style="float: left" onclick="y()"><h1>y</h1></button></td>
+        <td><button class="glass" id="z"style="float: left" onclick="z()"><h1>z</h1></button></td>
+    </tr>
+</table>
+<button style="text-align: center" onclick="init()" class="button">speak</button>
+<button style="text-align: center" onclick="re()" class="button">Another search</button>
 </body>
 </html>

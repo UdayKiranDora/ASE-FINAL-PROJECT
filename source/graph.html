@@ -5,21 +5,58 @@
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
-            var h=0.725424;
             var data = google.visualization.arrayToDataTable([
                 ['Task', 'Hours per Day'],
-                ['Correct',2],
+                ['Correct',1],
                 ['Wrong', 3]
             ]);
             var options = {
-                title: 'Scoring'
+                title: 'Physics'
             };
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
             chart.draw(data, options);
         }
     </script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Correct',2],
+                ['Wrong', 2]
+            ]);
+            var options = {
+                title: 'Math'
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Correct',3],
+                ['Wrong', 1]
+            ]);
+            var options = {
+                title: 'Chemistry'
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+            chart.draw(data, options);
+        }
+    </script>
 </head>
 <body>
-<div id="piechart" style="width: 900px; height: 500px;"></div>
+<table>
+    <tr>
+        <td><div id="piechart" style="width: 400px; height: 500px;"></div></td>
+        <td><div id="piechart1" style="width: 400px; height: 500px;"></div></td>
+        <td><div id="piechart2" style="width: 400px; height: 500px;"></div></td>
+    </tr>
+</table>
 </body>
 </html>
