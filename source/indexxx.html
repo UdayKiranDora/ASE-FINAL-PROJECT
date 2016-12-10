@@ -1,199 +1,31 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
+    <title>Bootstrap Example</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-    <title></title>
-
-
-
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <style>
-
-        #facebook {
-            display: inline-block;
-            text-align: center;
-            vertical-align: middle;
-            width: 120px;
-            height:30px;
-            padding-top: 10px;
-            border: 0px solid #178bb6;
-            border-radius: 8px;
-            background: #3b5998;
-            font-family: 'Open Sans', sans-serif;
-            font-weight:700;
-            color: #ffffff;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-        #facebook:hover,
-        #facebook:focus {
-            background: #37528c;
-            color: #ffffff;
-            text-decoration: none;
-        }
-        #facebook:active {
-            background: #1ca4d6;
-        }
-        #facebook:before{
-            content:  "\0000a0";
-            display: inline-block;
-            height: 30px;
-            width: 20px;
-            line-height: 24px;
-            margin: 0 4px -6px -4px;
-            position: relative;
-            padding-left: 10px;
-            top: -5px;
-            left: -10px;
-            background: url("http://i.imgur.com/0bcxkOD.png") no-repeat center center #37528c;
-            background-size: 13px 24px;
-            -webkit-border-radius: 8px 0px 0px 8px;
-            -moz-border-radius: 8px 0px 0px 8px;
-            -o-border-radius: 8px 0px 0px 8px;
-            -ms-border-radius: 8px 0px 0px 8px;
-            border-radius: 8px 0px 0px 8px;
-        }
-
-    </style>
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<script>
-
-    function statusChangeCallback(response) {
-        console.log('statusChangeCallback');
-        console.log(response);
-
-        if (response.status === 'connected') {
-
-            testAPI();
-
-        } else if (response.status === 'not_authorized') {
-            document.getElementById('status').innerHTML = 'Please log ' +
-                    'into this app.';
-        } else {
-
-            document.getElementById('status').innerHTML = 'Please log ' +
-                    'into Facebook.';
-        }
-    }
-
-
-    function checkLoginState() {
-        window.location="clarifi.html"
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-        });
-    }
-
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : 1212558115433405,
-            cookie     : true,  // enable cookies to allow the server to access
-                                // the session
-            xfbml      : true,  // parse social plugins on this page
-            version    : 'v2.5' // use graph api version 2.5
-        });
-
-
-
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-        });
-
-    };
-
-
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-
-    function testAPI() {
-        console.log('Welcome!  Fetching your information.... ');
-        FB.api('/me', function(response) {
-            console.log('Successful login for: ' + response.name);
-
-
-        });
-    }
-    function login() {
-        FB.login(function(response) {
-            if (response.authResponse) {
-                //   alert('Success!');
-                window.location="http://localhost:63342/ASE-FINAL-PROJECT-master/source/lol.html?_ijt=7e5eiqdnkh05m69a7tg1g9mecp";
-
-            }else{
-                alert('Login Failed!');
-            }
-        }, {scope: 'email'});
-    }
-</script>
-<script>
-
-    // var z=1;
-    function validate2()
-    {
-
-        if (localStorage) {
-            form = document.forms["logv"];
-            var yn = form["unam"].value;
-            var xn = localStorage.getItem("unn");
-            var x = localStorage.getItem("pnn");
-            var y = form["upass"].value;
-
-            if (yn == xn && x == y) {
-
-                return true;
-            } else {
-                alert("check login details");
-                return false;
-            }
-
-
-
-        }    }</script>
-
 <body>
 
-<div class="vid-container">
-    <video id="Video1" class="bgvid back" autoplay="false" muted="muted" preload="auto" loop>
-        <source src="http://shortcodelic1.manuelmasiacsasi.netdna-cdn.com/themes/geode/wp-content/uploads/2014/04/milky-way-river-1280hd.mp4.mp4" type="video/mp4">
-    </video>
-    <div class="inner-container">
-        <video id="Video2" class="bgvid inner" autoplay="false" muted="muted" preload="auto" loop>
-            <source src="http://shortcodelic1.manuelmasiacsasi.netdna-cdn.com/themes/geode/wp-content/uploads/2014/04/milky-way-river-1280hd.mp4.mp4" type="video/mp4">
-        </video>
-        <div class="box">
-            <h1>Child Login</h1>
-            <form name="logv" method="post" action="lol.html" onsubmit="return validate2() "> <!--action="login.html" -->
-                <input type="text"  id="unam" placeholder="Username"/>
-                <input type="password"  id="upass" placeholder="Password"/>
-                <button>Login</button>
-            </form>
-            <p>Not a member? <span><a href="register.html"> Sign Up</a></span></p>
-            <center>  <div id="facebook" onclick="login();">Log In</div></center>
-        </div>
+<div class="container">
+   <center> <h2>Join the dots</h2> </center>
 
+    <center><div class="btn-group">
+        <a href="1.html" target="frame7"> <button type="button" class="btn btn-primary">level 1</button></a>
+        <a href="2.html" target="frame7"> <button type="button" class="btn btn-primary">level 2</button></a>
+        <a href="3.html" target="frame7"> <button type="button" class="btn btn-primary">level 3</button></a>
+        <a href="4..html" target="frame7"> <button type="button" class="btn btn-primary">level 4</button></a>
     </div>
-
+    <div class="btn-group">
+        <a href="5.html" target="frame7"> <button type="button" class="btn btn-primary">level 5</button></a>
+        <a href="6.html" target="frame7"> <button type="button" class="btn btn-primary">level 6</button></a>
+        <a href="7.html" target="frame7"> <button type="button" class="btn btn-primary">level 7</button></a>
+        <a href="game.html" target="frame7"> <button type="button" class="btn btn-primary">level 8</button></a>
+    </div></center>
 </div>
-
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-<script src="js/index.js"></script>
-
-
-
-
 
 </body>
 </html>

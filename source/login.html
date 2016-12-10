@@ -26,8 +26,24 @@
 
     <script>
 
-        function validataionn() {
-            window.alert("login success");
+        function vali() {
+            //   window.alert("ef");
+
+              var valiu = document.getElementById("form-user-name").value;
+            var valip = document.getElementById("form-password").value;
+            /*    if(valiu==""||valiu==null,valip==""||valip==null)
+             {
+             window.alert("login fail: field details empty");
+             return false;
+             }*/
+            // var valiu = document.getElementById("form-username").value;
+            //var valip = document.getElementById("form-password").value;
+            if(valiu==""||valiu==null,valip==""||valip==null)
+            {
+                window.alert("login fail: field details empty");
+                return false;
+            }
+
             var j=0;
 
             var xmlhttp = new XMLHttpRequest();
@@ -44,7 +60,7 @@
             function myFunction(response) {
                 var arr = JSON.parse(response);
                 var i;
-                var valiu = document.getElementById("form-username").value;
+                var valiu = document.getElementById("form-user-name").value;
                 var valip = document.getElementById("form-password").value;
                 var arr1 = JSON.parse(response);
                 for (i = 0; i < arr1.length; i++) {
@@ -54,7 +70,7 @@
 
                         window.alert("login success");
 
-                        //window.location="home.html";
+                        window.location="Increement2/project-cards-template/scss/addquehome.html";
                         j=1;
                         return true;
 
@@ -72,6 +88,7 @@
             //if (j==1){return true;}
             //else {return false;}
         }
+
     </script>
 </head>
 
@@ -97,10 +114,10 @@
 
                     </div>
                     <div class="form-bottom">
-                        <form role="form" action="lol.html" method="post" class="registration-form" onsubmit="return vali()">
+                        <form role="form"  method="post" action="Increement2/project-cards-template/scss/addquehome.html" name="login-form" onsubmit=" return vali()">
                             <div class="form-group">
-                                <label class="sr-only" for="form-first-name">Unique ID</label>
-                                <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
+                                <label class="sr-only" for="form-user-name">Unique ID</label>
+                                <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-user-name">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-password">Parent Password</label>
@@ -112,7 +129,7 @@
                                 </fb:login-button>
                             </div>
 
-                        </form>
+                         </form>
                     </div>
                 </div>
             </div>
@@ -151,7 +168,7 @@
     // Button.  See the onlogin handler attached to it in the sample
     // code below.
     function checkLoginState() {
-        window.location="clarifi.html"
+        window.location="Increement2/project-cards-template/scss/addquehome.html"
         FB.getLoginStatus(function(response) {
             statusChangeCallback(response);
         });
