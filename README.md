@@ -9,7 +9,7 @@ It deals with interactive gaming and  education.EduFun is a platform of educatio
 * increment 2 report :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/wiki/Project-Report-2
 * document :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/blob/master/documentation/EduFun%20Increment2.pdf
             
-* increment 3 report :
+* increment 3 report :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/wiki/Project-Report-3
 * document :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/blob/master/documentation/EduFun_Inc3%20(1).pdf
             
 * increment 4 report :
