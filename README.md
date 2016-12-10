@@ -4,20 +4,16 @@ It deals with interactive gaming and  education.EduFun is a platform of educatio
 
 
 * increment 1 report :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/wiki/Project-Report-1
-            
-            document :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/blob/master/documentation/EduFun%20report%20final.pdf
+* document :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/blob/master/documentation/EduFun%20report%20final.pdf
             
 * increment 2 report :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/wiki/Project-Report-2
-
-            document :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/blob/master/documentation/EduFun%20Increment2.pdf
+* document :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/blob/master/documentation/EduFun%20Increment2.pdf
             
 * increment 3 report :
-
-            document :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/blob/master/documentation/EduFun_Inc3%20(1).pdf
+* document :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/blob/master/documentation/EduFun_Inc3%20(1).pdf
             
 * increment 4 report :
-
-            document :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/blob/master/documentation/EduFun-Inc4final.pdf
+* document :https://github.com/UdayKiranDora/ASE-FINAL-PROJECT/blob/master/documentation/EduFun-Inc4final.pdf
 
 Youtube Link : https://www.youtube.com/watch?v=484kb2tn-KI&feature=youtu.be
 PPT Link     : https://www.dropbox.com/s/1ikpy7gg9p5plbk/ASE%20Project%20ppt.pptx?dl=0
